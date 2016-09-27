@@ -1,13 +1,14 @@
+import QuizHeader from './QuizHeader.jsx';
 import QuestionList from './QuestionList.jsx';
 import Result from './Result.jsx';
 
-	const Jumbotron = ReactBootstrap.Jumbotron;
-    const Button = ReactBootstrap.Button;
-    const Grid = ReactBootstrap.Grid;
-    const Panel = ReactBootstrap.Panel;
-    const Input = ReactBootstrap.Input;
-    const Modal = ReactBootstrap.Modal;
-
+export const Jumbotron = ReactBootstrap.Jumbotron;
+export const Button = ReactBootstrap.Button;
+export const Grid = ReactBootstrap.Grid;
+export const Panel = ReactBootstrap.Panel;
+export const Input = ReactBootstrap.Input;
+export const Modal = ReactBootstrap.Modal;
+  
     class QuizApp extends React.Component {
       constructor(props) {
         super(props);
@@ -39,7 +40,7 @@ import Result from './Result.jsx';
           : null;
         return (
           <div>
-            {quizHeader}
+            <QuizHeader/>
             {questionList}
             <Result show={this.state.showResult} onHide={closeResult}
             correct={this.state.correct} total={questions.length} />
@@ -47,17 +48,6 @@ import Result from './Result.jsx';
         );
       }
     }
-
-    const quizHeader = (
-      <Jumbotron>
-        <Grid>
-          <h1>How Smart Are You?</h1>
-          <p>A slightly interesting quiz consisting of seven questions that I scraped from some place I can't remember.</p>
-          <p><Button bsStyle="primary" href="https://github.com/prashcr/firequiz"
-            target="_blank">What's this?</Button></p>
-        </Grid>
-      </Jumbotron>
-    );
 
     React.render(<QuizApp i="0" />, document.getElementById('app'));
 

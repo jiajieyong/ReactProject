@@ -40,23 +40,31 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
-/*!**********************************!*\
-  !*** ./src/client/app/index.jsx ***!
-  \**********************************/
+/******/ ([
+/* 0 */
+/*!*********************************************!*\
+  !*** ./src/client/app/components/index.jsx ***!
+  \*********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Modal = exports.Input = exports.Panel = exports.Grid = exports.Button = exports.Jumbotron = undefined;
+	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _QuestionList = __webpack_require__(/*! ./QuestionList.jsx */ 173);
+	var _QuizHeader = __webpack_require__(/*! ./QuizHeader.jsx */ 1);
+	
+	var _QuizHeader2 = _interopRequireDefault(_QuizHeader);
+	
+	var _QuestionList = __webpack_require__(/*! ./QuestionList.jsx */ 2);
 	
 	var _QuestionList2 = _interopRequireDefault(_QuestionList);
 	
-	var _Result = __webpack_require__(/*! ./Result.jsx */ 175);
+	var _Result = __webpack_require__(/*! ./Result.jsx */ 4);
 	
 	var _Result2 = _interopRequireDefault(_Result);
 	
@@ -68,12 +76,12 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Jumbotron = ReactBootstrap.Jumbotron;
-	var Button = ReactBootstrap.Button;
-	var Grid = ReactBootstrap.Grid;
-	var Panel = ReactBootstrap.Panel;
-	var Input = ReactBootstrap.Input;
-	var Modal = ReactBootstrap.Modal;
+	var Jumbotron = exports.Jumbotron = ReactBootstrap.Jumbotron;
+	var Button = exports.Button = ReactBootstrap.Button;
+	var Grid = exports.Grid = ReactBootstrap.Grid;
+	var Panel = exports.Panel = ReactBootstrap.Panel;
+	var Input = exports.Input = ReactBootstrap.Input;
+	var Modal = exports.Modal = ReactBootstrap.Modal;
 	
 	var QuizApp = function (_React$Component) {
 	  _inherits(QuizApp, _React$Component);
@@ -128,7 +136,7 @@
 	      return React.createElement(
 	        'div',
 	        null,
-	        quizHeader,
+	        React.createElement(_QuizHeader2.default, null),
 	        questionList,
 	        React.createElement(_Result2.default, { show: this.state.showResult, onHide: closeResult,
 	          correct: this.state.correct, total: questions.length })
@@ -139,50 +147,93 @@
 	  return QuizApp;
 	}(React.Component);
 	
-	var quizHeader = React.createElement(
-	  Jumbotron,
-	  null,
-	  React.createElement(
-	    Grid,
-	    null,
-	    React.createElement(
-	      'h1',
-	      null,
-	      'How Smart Are You?'
-	    ),
-	    React.createElement(
-	      'p',
-	      null,
-	      'A slightly interesting quiz consisting of seven questions that I scraped from some place I can\'t remember.'
-	    ),
-	    React.createElement(
-	      'p',
-	      null,
-	      React.createElement(
-	        Button,
-	        { bsStyle: 'primary', href: 'https://github.com/prashcr/firequiz',
-	          target: '_blank' },
-	        'What\'s this?'
-	      )
-	    )
-	  )
-	);
-	
 	React.render(React.createElement(QuizApp, { i: '0' }), document.getElementById('app'));
 
 /***/ },
+/* 1 */
+/*!**************************************************!*\
+  !*** ./src/client/app/components/QuizHeader.jsx ***!
+  \**************************************************/
+/***/ function(module, exports) {
 
-/***/ 173:
-/*!*****************************************!*\
-  !*** ./src/client/app/QuestionList.jsx ***!
-  \*****************************************/
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Jumbotron = exports.Jumbotron = ReactBootstrap.Jumbotron;
+	var Button = exports.Button = ReactBootstrap.Button;
+	var Grid = exports.Grid = ReactBootstrap.Grid;
+	
+	var QuizHeader = function (_React$Component) {
+	  _inherits(QuizHeader, _React$Component);
+	
+	  function QuizHeader() {
+	    _classCallCheck(this, QuizHeader);
+	
+	    return _possibleConstructorReturn(this, (QuizHeader.__proto__ || Object.getPrototypeOf(QuizHeader)).apply(this, arguments));
+	  }
+	
+	  _createClass(QuizHeader, [{
+	    key: "render",
+	    value: function render() {
+	      return React.createElement(
+	        Jumbotron,
+	        null,
+	        React.createElement(
+	          Grid,
+	          null,
+	          React.createElement(
+	            "h1",
+	            null,
+	            "How Smart Are You?"
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            "A slightly interesting quiz consisting of seven questions that I scraped from some place I can't remember."
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            React.createElement(
+	              Button,
+	              { bsStyle: "primary", href: "https://github.com/prashcr/firequiz",
+	                target: "_blank" },
+	              "What's this?"
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return QuizHeader;
+	}(React.Component);
+	
+	module.exports = QuizHeader;
+
+/***/ },
+/* 2 */
+/*!****************************************************!*\
+  !*** ./src/client/app/components/QuestionList.jsx ***!
+  \****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _Question = __webpack_require__(/*! ./Question.jsx */ 174);
+	var _Question = __webpack_require__(/*! ./Question.jsx */ 3);
 	
 	var _Question2 = _interopRequireDefault(_Question);
 	
@@ -255,11 +306,10 @@
 	module.exports = QuestionList;
 
 /***/ },
-
-/***/ 174:
-/*!*************************************!*\
-  !*** ./src/client/app/Question.jsx ***!
-  \*************************************/
+/* 3 */
+/*!************************************************!*\
+  !*** ./src/client/app/components/Question.jsx ***!
+  \************************************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -316,11 +366,10 @@
 	module.exports = Question;
 
 /***/ },
-
-/***/ 175:
-/*!***********************************!*\
-  !*** ./src/client/app/Result.jsx ***!
-  \***********************************/
+/* 4 */
+/*!**********************************************!*\
+  !*** ./src/client/app/components/Result.jsx ***!
+  \**********************************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -390,6 +439,5 @@
 	module.exports = Result;
 
 /***/ }
-
-/******/ });
+/******/ ]);
 //# sourceMappingURL=bundle.js.map
