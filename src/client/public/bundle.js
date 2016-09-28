@@ -112,10 +112,6 @@
 	        }.bind(this),
 	        error: function error(data) {}
 	      });
-	      // const quizRef = new Firebase('https://firequiz.firebaseio.com/quizzes/' + this.props.i);
-	      // quizRef.on('value', snapshot => this.setState({
-	      //   quiz: snapshot.val()
-	      // }));
 	    }
 	  }, {
 	    key: 'completed',
@@ -141,7 +137,6 @@
 	        return _this3.setState({ showResult: false });
 	      };
 	      var questions = this.state.quiz.questions;
-	      //console.log(questions);
 	      var questionList = questions.length > 0 ? React.createElement(_QuestionList2.default, { data: questions, onComplete: this.completed }) : null;
 	      return React.createElement(
 	        'div',
@@ -217,7 +212,7 @@
 	            null,
 	            React.createElement(
 	              Button,
-	              { bsStyle: "primary", href: "https://github.com/prashcr/firequiz",
+	              { bsStyle: "primary", href: "https://github.com/jiajieyong/ReactProject",
 	                target: "_blank" },
 	              "What's this?"
 	            )

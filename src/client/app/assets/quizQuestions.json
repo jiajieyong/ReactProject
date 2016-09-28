@@ -34,5 +34,95 @@
       "3": "3.00"
     }
   ]
+},
+{
+  "answer": "1",
+  "text": "Johnny's mom has five kids, May, June, April, Penny, and?",
+  "choices": [
+    {
+      "0": "Nick"
+    },
+    {
+      "1": "Johnny"
+    },
+    {
+      "2": "Dime"
+    },
+    {
+      "3": "July"
+    }
+  ]
+},
+{
+  "answer": "0",
+  "text": "If an electric train is travelling east at 70 miles per hour, which way is the smoke going?",
+  "choices": [
+    {
+      "0": "West"
+    },
+    {
+      "1": "East like the train"
+    },
+    {
+      "2": "Nowhere"
+    },
+    {
+      "3": "North"
+    }
+  ]
+},
+{
+  "answer": "3",
+  "text": "I have a box whose dimensions are WxDxH 5x5x6. What is the surface area of the box?",
+  "choices": [
+    {
+      "0": "16"
+    },
+    {
+      "1": "150"
+    },
+    {
+      "2": "What's surface area?"
+    },
+    {
+      "3": "170"
+    }
+  ]
+},
+{
+  "answer": "0",
+  "text": "What is the first person, singular, future progressive tense of the word jump?",
+  "choices": [
+    {
+      "0": "I will be jumping."
+    },
+    {
+      "1": "I will jump."
+    },
+    {
+      "2": "I am jumping."
+    },
+    {
+      "3": "You will be jumping."
+    }
+  ]
+},
+{
+  "answer": "2",
+  "text": "What is the next number in this pattern: 21, 25, 33, 49, 81, ?",
+  "choices": [
+    {
+      "0": "101"
+    },
+    {
+      "1": "132"
+    },
+    {
+      "2": "145"
+    },
+    {
+      "3": "113"
+    }
+  ]
 }
 ]}

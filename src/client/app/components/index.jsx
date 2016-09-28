@@ -27,10 +27,6 @@ export const Modal = ReactBootstrap.Modal;
             error : function(data){
             }
         });
-        // const quizRef = new Firebase('https://firequiz.firebaseio.com/quizzes/' + this.props.i);
-        // quizRef.on('value', snapshot => this.setState({
-        //   quiz: snapshot.val()
-        // }));
       }
       completed(values) {
         console.log('complete');
@@ -46,7 +42,6 @@ export const Modal = ReactBootstrap.Modal;
       render() {
         const closeResult = e => this.setState({ showResult: false });
         const questions = this.state.quiz.questions;
-        //console.log(questions);
         const questionList = questions.length > 0 
           ? <QuestionList data={questions} onComplete={this.completed} />
           : null;
