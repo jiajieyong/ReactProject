@@ -49,6 +49,23 @@
 
 	'use strict';
 	
+	var _QuizApp = __webpack_require__(/*! ./QuizApp.jsx */ 1);
+	
+	var _QuizApp2 = _interopRequireDefault(_QuizApp);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	React.render(React.createElement(_QuizApp2.default, { i: '0' }), document.getElementById('app'));
+
+/***/ },
+/* 1 */
+/*!***********************************************!*\
+  !*** ./src/client/app/components/QuizApp.jsx ***!
+  \***********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
@@ -56,19 +73,19 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _QuizHeader = __webpack_require__(/*! ./QuizHeader.jsx */ 1);
+	var _QuizHeader = __webpack_require__(/*! ./QuizHeader.jsx */ 2);
 	
 	var _QuizHeader2 = _interopRequireDefault(_QuizHeader);
 	
-	var _QuestionList = __webpack_require__(/*! ./QuestionList.jsx */ 2);
+	var _QuestionList = __webpack_require__(/*! ./QuestionList.jsx */ 3);
 	
 	var _QuestionList2 = _interopRequireDefault(_QuestionList);
 	
-	var _Result = __webpack_require__(/*! ./Result.jsx */ 4);
+	var _Result = __webpack_require__(/*! ./Result.jsx */ 5);
 	
 	var _Result2 = _interopRequireDefault(_Result);
 	
-	var _jquery = __webpack_require__(/*! jquery */ 5);
+	var _jquery = __webpack_require__(/*! jquery */ 6);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
@@ -152,10 +169,12 @@
 	  return QuizApp;
 	}(React.Component);
 	
-	React.render(React.createElement(QuizApp, { i: '0' }), document.getElementById('app'));
+	module.exports = QuizApp;
+	
+	//React.render(<QuizApp i="0" />, document.getElementById('app'));
 
 /***/ },
-/* 1 */
+/* 2 */
 /*!**************************************************!*\
   !*** ./src/client/app/components/QuizHeader.jsx ***!
   \**************************************************/
@@ -228,7 +247,7 @@
 	module.exports = QuizHeader;
 
 /***/ },
-/* 2 */
+/* 3 */
 /*!****************************************************!*\
   !*** ./src/client/app/components/QuestionList.jsx ***!
   \****************************************************/
@@ -238,7 +257,7 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _Question = __webpack_require__(/*! ./Question.jsx */ 3);
+	var _Question = __webpack_require__(/*! ./Question.jsx */ 4);
 	
 	var _Question2 = _interopRequireDefault(_Question);
 	
@@ -311,7 +330,7 @@
 	module.exports = QuestionList;
 
 /***/ },
-/* 3 */
+/* 4 */
 /*!************************************************!*\
   !*** ./src/client/app/components/Question.jsx ***!
   \************************************************/
@@ -371,7 +390,7 @@
 	module.exports = Question;
 
 /***/ },
-/* 4 */
+/* 5 */
 /*!**********************************************!*\
   !*** ./src/client/app/components/Result.jsx ***!
   \**********************************************/
@@ -444,7 +463,7 @@
 	module.exports = Result;
 
 /***/ },
-/* 5 */
+/* 6 */
 /*!*********************************!*\
   !*** ./~/jquery/dist/jquery.js ***!
   \*********************************/
